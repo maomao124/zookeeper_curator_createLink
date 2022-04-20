@@ -1,26 +1,6 @@
-import org.apache.curator.RetryPolicy;
-import org.apache.curator.framework.CuratorFramework;
-import org.apache.curator.framework.CuratorFrameworkFactory;
-import org.apache.curator.retry.ExponentialBackoffRetry;
+```java
 
-/**
- * Project name(项目名称)：zookeeper_curator创建链接
- * Package(包名): PACKAGE_NAME
- * Class(类名): test
- * Author(作者）: mao
- * Author QQ：1296193245
- * GitHub：https://github.com/maomao124/
- * Date(创建日期)： 2022/4/20
- * Time(创建时间)： 20:32
- * Version(版本): 1.0
- * Description(描述)： 建立链接
- */
-
-public class test
-{
-    public static void main(String[] args) throws Exception
-    {
-        //重试策略
+//重试策略
         RetryPolicy retryPolicy = new ExponentialBackoffRetry(3000, 10);
         //zookeeper创建链接，第一种
         /*
@@ -43,7 +23,4 @@ public class test
                         .build();
         client.start();
 
-        String s = client.create().forPath("/app2");
-        System.out.println(s);
-    }
-}
+```
